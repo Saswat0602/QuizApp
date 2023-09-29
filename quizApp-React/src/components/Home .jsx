@@ -16,9 +16,9 @@ const Home = () => {
   return (
     <div>
       <section className="bg-blue-300 min-h-screen flex justify-center items-center">
-        <div className="p-4 bg-white rounded-lg shadow-lg h-[30%] w-[40%]">
+        <div className="p-4 bg-white rounded-lg shadow-lg h-[40%] w-[50%]">
           <div className="text-lg md:text-xl">
-            <h3 className="my-2">
+            <h3 className="my-2 text-2xl text-green-800">
               {qNum}. {currentQuestion.question}
             </h3>
           </div>
@@ -30,7 +30,7 @@ const Home = () => {
                 <label
                   key={key}
                   htmlFor={key}
-                  className="box flex items-center cursor-pointer"
+                  className="text-xl box flex items-center cursor-pointer my-2 hover:bg-gray-100"
                 >
                   <input
                     name="option"
@@ -38,7 +38,7 @@ const Home = () => {
                     id={key}
                     value={key}
                     required
-                    className="mr-2"
+                    className="mr-2 w-4"
                   />
                   {currentQuestion[key]}
                 </label>
@@ -46,7 +46,7 @@ const Home = () => {
             })}
           </div>
           <button
-            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            className="mt-4 hover:ring-blue-900 bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500"
             onClick={handleSubmit}
           >
             {currentQ === totalQ - 1 ? "Finish" : "Next Question"}
