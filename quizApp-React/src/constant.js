@@ -1031,3 +1031,4 @@ const quizData = [
     d: "non of the above",
   },
 ];
+export default quizData;
