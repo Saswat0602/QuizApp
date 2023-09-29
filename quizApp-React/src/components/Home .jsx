@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import quizData from "../constant";
 
 const Home = () => {
   const [currentQ, setcurrentQ] = useState(0);
   const currentQuestion = quizData[currentQ];
   const qNum = currentQ + 1;
-  const totalQuestions = quizData.length;
+  const totalQ = quizData.length;
 
   const handleSubmit = () => {
-    if (currentQ < totalQuestions - 1) {
+    if (currentQ < totalQ - 1) {
       setcurrentQ(currentQ + 1);
     }
   };
@@ -49,7 +49,7 @@ const Home = () => {
             className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
             onClick={handleSubmit}
           >
-            {currentQ === totalQuestions - 1 ? "Finish" : "Next Question"}
+            {currentQ === totalQ - 1 ? "Finish" : "Next Question"}
           </button>
         </div>
       </section>
